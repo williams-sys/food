@@ -1,0 +1,782 @@
+<!doctype html>
+<div class="loader-container">
+    <div class="loader">Loading...</div>
+</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food .</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/Group%20131.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Josefin+Sans&family=Source+Code+Pro:wght@600&family=Teko:wght@500&family=Ubuntu:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+        h1{
+            font-family: 'Kanit', sans-serif;
+        }
+        h2{
+            font-family: 'Barlow', sans-serif;
+        }
+        h3{
+            font-family: 'Barlow', sans-serif;
+        }
+        h4{
+            font-family: 'Ubuntu', sans-serif
+        }
+        h5{
+            font-family: 'Ubuntu', sans-serif
+        }
+        h6{
+            font-family: 'Ubuntu', sans-serif
+        }
+        p{
+            font-family: 'Ubuntu', sans-serif
+        }
+
+        .loader-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#ffffff;
+            height: 100vh;
+            position: fixed;
+            width: 100%;
+            z-index: 2000;
+        }
+
+        .loader,
+        .loader:before,
+        .loader:after {
+            border-radius: 50%;
+        }
+        .loader {
+            color: #F24405;
+            font-size: 11px;
+            text-indent: -99999em;
+            margin: 55px auto;
+            position: relative;
+            width: 10em;
+            height: 10em;
+            box-shadow: inset 0 0 0 1em;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .loader:before,
+        .loader:after {
+            position: absolute;
+            content: '';
+        }
+        .loader:before {
+            width: 5.2em;
+            height: 10.2em;
+            background: #ffffff;
+            border-radius: 10.2em 0 0 10.2em;
+            top: -0.1em;
+            left: -0.1em;
+            -webkit-transform-origin: 5.1em 5.1em;
+            transform-origin: 5.1em 5.1em;
+            -webkit-animation: load2 2s infinite ease 1.5s;
+            animation: load2 2s infinite ease 1.5s;
+        }
+        .loader:after {
+            width: 5.2em;
+            height: 10.2em;
+            background: #ffffff;
+            border-radius: 0 10.2em 10.2em 0;
+            top: -0.1em;
+            left: 4.9em;
+            -webkit-transform-origin: 0.1em 5.1em;
+            transform-origin: 0.1em 5.1em;
+            -webkit-animation: load2 2s infinite ease;
+            animation: load2 2s infinite ease;
+        }
+        @-webkit-keyframes load2 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes load2 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendor/hover/imagehover.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="container-fluid site-nav wow animate__bounceInDown ani-1">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <nav class="navbar align-items-center d-flex navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" class="site-logo" style="width: 50%;">
+                        </a>
+                        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars  menu-icon"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav" >
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#home" style="color: #F24405;">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#about" style="color: #F24405;">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#service" style="color: #F24405;">Services</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#chef" style="color: #F24405;">Chefs</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#popular" style="color: #F24405;">Popular</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#deli" style="color: #F24405;">Delivery</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#contact" style="color: #F24405;">Contact</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section id="home" class="home container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row min-vh-100 flex-column-reverse flex-md-row">
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-md-0 pb-5 pb-md-0">
+                        <div class="">
+                            <h1 class="font-weight-bold wow animate__fadeInUp ani-2">Fresh & Healthy</h1>
+                            <h1 class="font-weight-bold home-h1 py-3 wow animate__fadeInUp ani-3">&nbsp;Food Is Waiting</h1>
+                            <h1 class="font-weight-bold wow animate__fadeInUp ani-4">For You</h1>
+                            <p class="text-black-50 py-4 wow animate__fadeInUp ani-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            <button class="btn btn-primary wow animate__fadeInUp ani-6">View Food Menu</button>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-md-0 ">
+                        <div class="home-img d-flex justify-content-center align-items-center">
+                            <img src="img/italian%20cuisine.svg " class="rotate" style="width: 80%;">
+                            <div class="shape-2">
+                                <img src="img/shape2.svg" alt="" class="shape-2-img wow animate__bounceIn ani-4">
+                            </div>
+                            <div class="shape-3 wow animate__bounceIn ani-6">
+                                <img src="img/shape3.svg" alt="" >
+                            </div>
+                            <div class="shape-4">
+                                <img src="img/shape4.svg" class="shape-4-img wow animate__bounceIn ani-8"  >
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container-fluid ">
+        <div class="row py-5">
+            <section class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="my-5 text-center ">
+                            <h3 class="text-uppercase font-weight-bolder wow animate__fadeInUp ani-1">About us</h3>
+                            <img src="img/line.svg" class="wow animate__fadeInUp ani-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5 ">
+                    <div class="col-12 col-md-6 wow animate__bounceIn ani-3">
+                        <div class="row pricing-slide">
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card card-about shadow mb-5 services-card">
+                                <div class="card-body text-center">
+                                    <img src="img/Artboard%20–%201.svg" style="width: 60%;"><br>
+                                    <img src="img/5.svg" class="my-3">
+                                    <h4>Mixing Food</h4>
+                                    <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                    <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%202.svg" style="width: 60%;"><br>
+                                        <img src="img/4.svg" class="my-3">
+                                        <h4>Beefsteak Taobao</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%203.svg" style="width: 60%;"><br>
+                                        <img src="img/3.svg" class="my-3">
+                                        <h4>Chicken Fire</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%204.svg" style="width: 60%;"><br>
+                                        <img src="img/2.svg" class="my-3">
+                                        <h4>Italian Cuisine</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%205.svg" style="width: 60%;"><br>
+                                        <img src="img/5.svg" class="my-3">
+                                        <h4>Roast Beefsteak</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%206.svg" style="width: 60%;"><br>
+                                        <img src="img/4.svg" class="my-3">
+                                        <h4>Fired Noodles</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%207.svg" style="width: 60%;"><br>
+                                        <img src="img/2.svg" class="my-3">
+                                        <h4>Beefsteak</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-about shadow mb-5 services-card">
+                                    <div class="card-body text-center">
+                                        <img src="img/Artboard%20–%208.svg" style="width: 60%;"><br>
+                                        <img src="img/4.svg" class="my-3">
+                                        <h4>Pizza</h4>
+                                        <p class="my-3 px-2 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                        <a href="#" class="btn btn-primary mt-2">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mt-5 mt-md-0">
+                        <div class="ml-0 ml-md-5">
+                            <h4 class="wow animate__fadeInUp ani-1">Our Delicious & Testy Food</h4>
+                            <p class="text-black-50 py-4 wow animate__fadeInUp ani-2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. have suffered alteration in some form, by injected humour.</p>
+                            <a href="#" class="btn btn-outline-primary wow animate__fadeInUp ani-3">Explore Our Story</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </section>
+        </div>
+    </section>
+
+    <section id="service" class="service container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="my-5 text-center ">
+                            <h3 class="text-uppercase font-weight-bolder wow animate__fadeInUp ani-1">Our Services</h3>
+                            <img src="img/line.svg" class="wow animate__fadeInUp ani-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-4 d-flex justify-content-center wow animate__bounceIn ani-1">
+                        <div class="card-ser card text-center">
+                            <div class="card-body">
+                                <img src="img/Group%2076.svg" alt="">
+                                <h4 class="py-4 ">Food Quality</h4>
+                                <p class="px-3 text-black-50"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-center wow animate__bounceIn ani-2">
+                        <div class="card-ser card text-center my-4 my-md-0">
+                            <div class="card-body">
+                                <img src="img/deli.svg" alt="">
+                                <h4 class="py-4">Fast Delivery</h4>
+                                <p class="px-3 text-black-50"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-center wow animate__bounceIn ani-3">
+                        <div class="card-ser card text-center">
+                            <div class="card-body">
+                                <img src="img/taste.svg" alt="">
+                                <h4 class="py-4">Super Taste</h4>
+                                <p class="px-3 text-black-50"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chef" class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="my-5 text-center ">
+                            <h3 class="text-uppercase font-weight-bolder wow animate__fadeInUp ani-1">Our Chefs</h3>
+                            <img src="img/line.svg" class="wow animate__fadeInUp ani-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5 pb-5 d-flex justify-content-center">
+                    <div class="col-12 col-md-3 mb-3 mb-md-0 wow animate__bounceIn ani-1">
+                        <div class=" d-flex justify-content-center">
+                            <figure class="imghvr-shutter-in-vert" style="background-color: #F24405;border-radius: 23px; width: 90%;">
+                                <img src="img/1.svg" alt="">
+                                <figcaption class="d-flex justify-content-center align-items-center flex-column">
+                                    <h4 class="pb-3">Smith ALen</h4>
+                                    <p class="text-white-50">Asst, Chef</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3 mb-md-0 wow animate__bounceIn ani-2">
+                        <div class=" d-flex justify-content-center">
+                            <figure class="imghvr-shutter-in-vert" style="background-color: #F24405;border-radius: 23px; width: 90%;">
+                                <img src="img/3(2).svg" alt="">
+                                <figcaption class="d-flex justify-content-center align-items-center flex-column">
+                                    <h4 class="pb-3">Angelin Martin</h4>
+                                    <p class="text-white-50">Inter Chef</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3 mb-md-0 wow animate__bounceIn ani-1">
+                        <div class=" d-flex justify-content-center">
+                            <figure class="imghvr-shutter-in-vert" style="background-color: #F24405;border-radius: 23px; width: 90%;">
+                                <img src="img/6.svg" alt="">
+                                <figcaption class="d-flex justify-content-center align-items-center flex-column">
+                                    <h4 class="pb-3">Sam Harl</h4>
+                                    <p class="text-white-50">Head Of Chef</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3  wow animate__bounceIn ani-2">
+                        <div class=" d-flex justify-content-center">
+                            <figure class="imghvr-shutter-in-vert" style="background-color: #F24405;border-radius: 23px; width: 90%;">
+                                <img src="img/7.svg" alt="">
+                                <figcaption class="d-flex justify-content-center align-items-center flex-column">
+                                    <h4 class="pb-3">Smith ALen</h4>
+                                    <p class="text-white-50">Assistan Chef</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="popular" class=" container-fluid pricing" style="background-color: #FFF4F0;">
+        <div class="row py-5">
+            <section class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="my-5 text-center ">
+                            <h3 class="text-uppercase font-weight-bolder wow animate__fadeInUp ani-1">Popular Items</h3>
+                            <img src="img/line.svg" class="wow animate__fadeInUp ani-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2 ">
+
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                        <div class="ml-0 ml-md-5">
+                            <h4 class="wow animate__fadeInUp ani-1">Most Popular Items</h4>
+                            <p class="text-black-50 py-4 wow animate__fadeInUp ani-2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            <a href="#" class="btn btn-outline-primary wow animate__fadeInUp ani-3">Explore Our Story</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6  mt-5 mt-md-0 wow animate__bounceIn ani-3">
+                        <div class="row pricing-slide">
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-po shadow mb-5">
+                                    <div class="card-body " style="padding-top: unset;">
+                                        <img src="img/blog4.svg" style="width: 100%;"><br>
+                                        <div class="px-2">
+                                            <h4 class="pt-3 ">Vegetable Burger</h4>
+                                            <p class="my-3 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a href="#" class="btn btn-secondary mt-2">Add To Card</a>
+                                                <h5 class="text-primary" style="margin-bottom: unset;">$10.00</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-po shadow mb-5">
+                                    <div class="card-body " style="padding-top: unset;">
+                                        <img src="img/blog3.svg" style="width: 100%;"><br>
+                                        <div class="px-2">
+                                            <h4 class="pt-3 ">Beef Burger</h4>
+                                            <p class="my-3 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a href="#" class="btn btn-secondary mt-2">Add To Card</a>
+                                                <h5 class="text-primary" style="margin-bottom: unset;">$10.00</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-po shadow mb-5">
+                                    <div class="card-body " style="padding-top: unset;">
+                                        <img src="img/noodles.svg" style="width: 100%;"><br>
+                                        <div class="px-2">
+                                            <h4 class="pt-3 ">Fired Noodles</h4>
+                                            <p class="my-3 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a href="#" class="btn btn-secondary mt-2">Add To Card</a>
+                                                <h5 class="text-primary" style="margin-bottom: unset;">$10.00</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-po shadow mb-5">
+                                    <div class="card-body " style="padding-top: unset;">
+                                        <img src="img/pizza.svg" style="width: 100%;"><br>
+                                        <div class="px-2">
+                                            <h4 class="pt-3 ">Pizza</h4>
+                                            <p class="my-3 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a href="#" class="btn btn-secondary mt-2">Add To Card</a>
+                                                <h5 class="text-primary" style="margin-bottom: unset;">$10.00</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-po shadow mb-5">
+                                    <div class="card-body " style="padding-top: unset;">
+                                        <img src="img/fired%20beefsteak.svg" style="width: 100%;"><br>
+                                        <div class="px-2">
+                                            <h4 class="pt-3 ">Fired Beefsteak</h4>
+                                            <p class="my-3 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a href="#" class="btn btn-secondary mt-2">Add To Card</a>
+                                                <h5 class="text-primary" style="margin-bottom: unset;">$10.00</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="card card-po shadow mb-5">
+                                    <div class="card-body " style="padding-top: unset;">
+                                        <img src="img/chicken.svg" style="width: 100%;"><br>
+                                        <div class="px-2">
+                                            <h4 class="pt-3 ">Chicken Fired</h4>
+                                            <p class="my-3 text-black-50">There are many variations of <br>passages of Lorem Ipsum available..</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a href="#" class="btn btn-secondary mt-2">Add To Card</a>
+                                                <h5 class="text-primary" style="margin-bottom: unset;">$10.00</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </section>
+
+    <section id="deli" class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="mt-5 text-center mb-md-0">
+                            <h3 class="text-uppercase font-weight-bolder wow animate__fadeInUp ani-1">Delivery</h3>
+                            <img src="img/line.svg" class="wow animate__fadeInUp ani-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row min-vh-100">
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                        <div class="ph d-flex justify-content-center">
+                            <img src="img/Group%20130.svg" class="ph-img wow animate__bounceIn ani-3"  >
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-5 my-md-0">
+                        <div class="">
+                            <h4 class="wow animate__fadeInUp ani-1">Simple Way To Order Your Food</h4>
+                            <p class="text-black-50 my-4 wow animate__fadeInUp ani-2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            <div class="d-flex align-items-center wow animate__bounceIn ani-1">
+                                <img src="img/Group%20127.svg" style="width: 8%;">
+                                <h6 class="px-3">Select Your Food</h6>
+                            </div>
+                            <div class="d-flex align-items-center my-3 wow animate__bounceIn ani-2">
+                                <img src="img/Group%20128.svg" style="width: 8%;">
+                                <h6 class="px-3">Add To Card</h6>
+                            </div>
+                            <div class="d-flex align-items-center wow animate__bounceIn ani-1">
+                                <img src="img/Group%20129.svg" style="width: 8%;">
+                                <h6 class="px-3">Order Your Food</h6>
+                            </div>
+                            <div class="mt-3 app wow animate__bounceIn ani-2">
+                                <a href="#">
+                                    <img src="img/google.svg" style="width: 20%;">
+                                </a>
+                                <a href="#">
+                                    <img src="img/apple.svg" style="width: 20%;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container-fluid">
+        <div class="row">
+            <footer class="col-12 footer">
+                <div class="container">
+                    <div class="row mt-5 mb-4">
+                        <div class="col-12">
+                            <div class="mt-5 text-center mb-md-0">
+                                <h3 class="text-uppercase font-weight-bolder wow animate__fadeInUp ani-1 text-white">Get In Touch</h3>
+                                <img src="img/line2.svg" class="wow animate__fadeInUp ani-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row wow animate__fadeInUp ani-1 min-vh-100">
+                        <div class="col-12 col-md-6 col-lg-3  py-4">
+                            <div class="text-white text-center">
+                                <h2 class="pb-3">Food .</h2>
+                                <p class="pb-3 text-white font-weight-light">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized.</p>
+                                <div class="d-flex justify-content-around ">
+                                    <a href="#">
+                                        <i class="fa fa-instagram  text-white social-icon "></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-facebook-f  text-white social-icon "></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter  text-white social-icon "></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google  text-white social-icon "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3  py-4">
+                            <div class="text-white ">
+                                <h4 class="text-uppercase mb-4">Quick Links</h4>
+                                <div class="font-weight-light">
+                                    <a href="#" class="text-white text-uppercase">Food Collection</a>
+                                    <br> <br>
+                                    <a href="#" class="text-white text-uppercase">Services</a>
+                                    <br> <br>
+                                    <a href="#" class="text-white text-uppercase">Online Order</a>
+                                    <br> <br>
+                                    <a href="#" class="text-white text-uppercase">Contacts</a>
+                                    <br><br>
+                                    <a href="#" class="text-white text-uppercase">Blogs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3  py-4">
+                            <div class="text-white">
+                                <h4 class="text-uppercase mb-4">Services</h4>
+                                <div class="font-weight-light">
+                                    <div class="font-weight-light">
+                                        <a href="#" class="text-white text-uppercase">About</a>
+                                        <br> <br>
+                                        <a href="#" class="text-white text-uppercase">Support</a>
+                                        <br> <br>
+                                        <a href="#" class="text-white text-uppercase">Chefs</a>
+                                        <br><br>
+                                        <a href="#" class="text-white text-uppercase">BLogs</a>
+                                        <br><br>
+                                        <a href="#" class="text-white text-uppercase">Privecy & Policy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3  py-4">
+                            <div class="text-white">
+                                <h4 class="text-uppercase mb-4">Send Mail</h4>
+                                    <form action="#" class="w-75">
+                                        <div class="form-group ">
+                                            <input type="text" class="form-control " placeholder="Your Name">
+                                        </div>
+                                        <div class="form-group ">
+                                            <input type="text" class="form-control " placeholder="Your Email">
+                                        </div>
+                                        <div class="form-group ">
+                                            <input type="text" class="form-control " placeholder="Send Message">
+                                        </div>
+                                    </form>
+                                    <button class="btn btn-dark">Send</button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.9792762734314!2d96.1598197153703!3d16.77770662451635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec91e8faaaab%3A0x7e3c9e47b88edcf0!2sMiMber%20Institute%20Of%20Management%20Studies!5e0!3m2!1sen!2smm!4v1586727270997!5m2!1sen!2smm" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="row wow animate__fadeInUp ani-2 mt-4 mt-md-0">
+                        <div class="col-12">
+                            <div class="pb-5 d-flex flex-column flex-lg-row justify-content-between">
+                                <div class="text-white-50 mb-2">©  All Rights Reserved</div>
+                                <div class="text-white-50">Designed by Williams</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script src="vendor/way_point/jquery.waypoints.min.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script>
+        $(".pricing-slide").slick({
+            arrows:false,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+    <Script>
+        wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animate__animated', // default
+                offset:       0,          // default
+                mobile:       true,       // default
+                live:         true        // default
+            }
+        )
+        wow.init();
+
+
+    </Script>
+    <script src="index.js"></script>
+
+</body>
+</html>

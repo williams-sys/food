@@ -1,0 +1,256 @@
+.ani-1{
+    animation-delay: 0.1s;
+}
+.ani-2{
+    animation-delay: 0.2s;
+}
+.ani-3{
+    animation-delay: 0.3s;
+}
+.ani-4{
+    animation-delay: 0.4s;
+}
+.ani-5{
+    animation-delay: 0.5s;
+
+}
+.ani-6{
+    animation-delay: 0.6s;
+
+}
+.ani-7{
+    animation-delay: 0.7s;
+
+}
+.ani-8{
+    animation-delay: 0.8s;
+
+}
+.ani-9{
+    animation-delay: 0.9s;
+
+}
+.rotate{
+    animation: ro 1s linear;
+}
+@keyframes ro {
+    0%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+.site-logo{
+    width: 125px;
+}
+
+.site-nav {
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+
+.site-nav-scroll {
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #F2440550;
+    animation: toShow 1s linear;
+}
+
+@keyframes toShow {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.nav-link {
+    padding: 0.5rem 1.3rem !important;
+
+}
+
+.nav-link.current-section {
+    font-weight: 700;
+
+    padding: 0.5rem 1.3rem !important;
+}
+
+.site-nav-scroll .nav-link {
+    color: #F24405 !important;
+}
+
+.site-nav-scroll .nav-link.current-section {
+    font-weight: 700;
+
+    padding: 0.5rem 1.3rem !important;
+}
+
+.site-nav-scroll .menu-icon {
+    color: #F24405;
+}
+
+
+.home{
+    background-color: #FFF4F0;
+}
+.home-h1:before{
+    content: "Delicious";
+    font-weight: bold;
+    color: #F24405;
+}
+.home-img{
+    position: relative;
+    width: 540px;
+    height: 546px;
+}
+.shape-2-img{
+    width: 70%;
+}
+.shape-2{
+    position: absolute;
+    top: 48px;
+    left: 36px;
+}
+.shape-3{
+    position: absolute;
+    bottom: 128px;
+    left: 48px;
+}
+.shape-4-img{
+    width: 80%;
+}
+.shape-4{
+    position: absolute;
+    bottom: 32px;
+    right: 46px;
+}
+.card{
+    width: 95%;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px #00000030;
+}
+.card-about:hover{
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px #00000030;
+    background-color: #FFF4F0;
+    transition: 0.5s;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    width: 25px !important;
+    height: 5px !important;
+    background-color: transparent;
+    border: 2px solid #F24405;
+    border-radius:5px;
+}
+
+.slick-dots li.slick-active {
+    width: 27px !important;
+    height: 7px !important;
+    background-color: #F24405 !important;
+}
+.service{
+    background-color: #FFF4F0;
+}
+.card-ser:hover{
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px #00000030;
+    background-color:#FD8A61;
+    transition: 0.5s;
+}
+.card-po:hover{
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px #00000030;
+
+    transition: 0.5s;
+}
+.ph-img{
+    width: 80%;
+}
+.footer{
+    background-color: #F24405;
+}
+.social-icon:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 576px){
+
+    .nav-link.current-section {
+        border-left: 2px solid #F24405;
+    }
+    .site-nav-scroll .nav-link.current-section {
+        border-left: 2px solid #F24405;
+        padding: 0.5rem 1.3rem !important;
+    }
+    .site-nav {
+        background-color: #ffffffee;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 5px #F2440550;
+
+    }
+    .navbar{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .site-nav .menu-icon {
+        color: #F24405 !important;
+    }
+    .navbar-nav {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .site-nav .nav-link {
+        color: #F24405 !important;
+        background: #FFF4F050;
+    }
+
+
+
+    .home-img{
+
+    }
+    .shape-2-img{
+        width: 90px;
+    }
+    .shape-2{
+        top: 100px;
+    }
+    .shape-3{
+        bottom: 80px;
+    }
+    .shape-4-img{
+        width: 100px;
+    }
+    .shape-4{
+        position: absolute;
+        bottom: 100px;
+        right: 30px;
+    }
+    .ph-img{
+        width: 95%;
+    }
+    .app{
+        width: 100%;
+    }
+}
