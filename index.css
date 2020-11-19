@@ -254,3 +254,64 @@ html{
         width: 100%;
     }
 }
+
+@media screen and (max-width: 780px){
+
+    .nav-link.current-section {
+        border-left: 2px solid #F24405;
+    }
+    .site-nav-scroll .nav-link.current-section {
+        border-left: 2px solid #F24405;
+        padding: 0.5rem 1.3rem !important;
+    }
+    .site-nav {
+        background-color: #ffffffee;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 5px #F2440550;
+
+    }
+    .navbar{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .site-nav .menu-icon {
+        color: #F24405 !important;
+    }
+    .navbar-nav {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .site-nav .nav-link {
+        color: #F24405 !important;
+        background: #FFF4F050;
+    }
+
+
+
+    .home-img{
+
+    }
+    .shape-2-img{
+        width: 90px;
+    }
+    .shape-2{
+        top: 100px;
+    }
+    .shape-3{
+        bottom: 80px;
+    }
+    .shape-4-img{
+        width: 100px;
+    }
+    .shape-4{
+        position: absolute;
+        bottom: 100px;
+        right: 30px;
+    }
+    .ph-img{
+        width: 95%;
+    }
+    .app{
+        width: 100%;
+    }
+}
