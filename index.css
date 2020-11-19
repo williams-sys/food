@@ -30,6 +30,14 @@
     animation-delay: 0.9s;
 
 }
+.ani-10{
+    animation-delay: 1.5s;
+
+}
+.ani-11{
+    animation-delay: 2s;
+
+}
 .rotate{
     animation: ro 1s linear;
 }
